@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<style>
+    input {
+        font: 18pt Arial;
+        width: 100;
+    }
+
+    div#estad {
+        margin-top: 20px;
+        font: 20pt Arial;
+    }
+</style>
+
+<body>
+    <h1>Descubra o quão bem você está!</h1>
+    <h2>Digite em que país você mora:</h2>
+    <input type="text" name="txtname" id="txtname">
+    <input type="submit" value="Confirmar" onclick="state()">
+    <div id="estad">
+
+    </div>
+    <script>
+        function state() {
+            var pais = window.document.getElementById('txtname')
+            var ps = String(pais.value)
+            var estad = window.document.querySelector('div#estad')
+
+            if (ps == "Brasil") {
+                estad.innerHTML = `<p> KKKKK TU É DO <strong>${ps}</strong> TA LASCADO(A) KKKKKKKKKK</p>`
+            } else if (ps == "Angola") {
+                estad.innerHTML = `<p> tu eres cabuena porque es da <strong>${ps}</strong> soraiya</p>`
+            } else {
+                estad.innerHTML = `<p> IH ALA, TU MORA NO(A)(S) <strong>${ps}</strong> GRINGO SAFADO </p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
